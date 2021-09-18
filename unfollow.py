@@ -20,6 +20,7 @@ friends = api.friends_ids(SCREEN_NAME)
 
 for f in friends:
     if f not in followers:
+        print('Unfollowed the user ' + api.get_user(f).screen_name)
         format(api.get_user(f).screen_name)
         api.destroy_friendship(f)
 

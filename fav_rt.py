@@ -15,10 +15,9 @@ print("Follow users :", FOLLOW)
 for tweet in tweepy.Cursor(api.search, q=QUERY).items():
     try:
         print('\nTweet by: @' + tweet.user.screen_name)
-
-       #tweet.retweet()
-       #print('Retweeted the tweet')
-
+        #tweet.retweet()
+        #print('Retweeted the tweet')
+        
         # Favorite the tweet
         if LIKE:
             tweet.favorite()
